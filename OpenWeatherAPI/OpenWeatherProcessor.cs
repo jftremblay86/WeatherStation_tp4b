@@ -111,8 +111,13 @@ namespace OpenWeatherAPI
                     OWCurrentWeaterModel result = await response.Content.ReadAsAsync<OWCurrentWeaterModel>();
                     return result;
                 }
+                else
+                {
+                    OWCurrentWeaterModel result = await response.Content.ReadAsAsync<OWCurrentWeaterModel>();
+                    return result;
+                }
 
-                return null;
+               
 
             }
         }
