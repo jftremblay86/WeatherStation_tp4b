@@ -106,19 +106,8 @@ namespace OpenWeatherAPI
         {            
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(longUrl))
             {
-                if (response.IsSuccessStatusCode)
-                {
-                    OWCurrentWeaterModel result = await response.Content.ReadAsAsync<OWCurrentWeaterModel>();
-                    return result;
-                }
-                else
-                {
-                    OWCurrentWeaterModel result = await response.Content.ReadAsAsync<OWCurrentWeaterModel>();
-                    return result;
-                }
-
-               
-
+                OWCurrentWeaterModel result = await response.Content.ReadAsAsync<OWCurrentWeaterModel>();
+                return result;
             }
         }
     }

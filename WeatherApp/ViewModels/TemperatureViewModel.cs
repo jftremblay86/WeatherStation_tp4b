@@ -90,7 +90,7 @@ namespace WeatherApp.ViewModels
         private async Task GetTempAsync()
         {
             CurrentTemp = await TemperatureService.GetTempAsync();
-
+            if(currentTemp !=null)
             RawText = $"Time : {CurrentTemp.DateTime.ToLocalTime()} {Environment.NewLine}Temperature : {CurrentTemp.Temperature}";
         }
 
